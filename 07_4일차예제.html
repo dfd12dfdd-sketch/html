@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>260126 4일차예제</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box {
+            background-color: #faf3ea;
+            width: 700px;
+            padding: 60px 150px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0 auto; /* 0 고정값! auto가 전체 가운데 배치하는 태그 */            
+        }
+
+        .box h1 {
+            font-size: 80px;
+            margin-bottom: 53px;
+        }
+
+        .box .date {
+            padding-bottom: 53px;
+        }
+
+        .box .date p {
+            font-size: 24px;
+        }
+
+        .box .step {
+            margin-bottom: 53px;
+        }
+
+        .box .step div {
+            font-size: 16px;
+            border-bottom: solid 1px black;
+            padding: 24px;
+        }
+
+        .box .step div p:nth-child(1) {/* p:nth-child(1) 맨위 글자만 볼드, (2)두번째 글자가 볼드  */
+            font-weight: bold;
+        }
+
+        .box a {
+            text-decoration: none;
+            display: block;
+            /* 가로세로 사이즈 입력가능케 함 (인라인요소인 a를 사이즈 설정해주기)  */
+            width: 285px;
+            height: 60px;
+            border-radius: 40px;
+            margin: 0px auto; /* 0는 고정값! 가운데 배치 auto */
+            border: solid 1px #000000;
+            line-height: 60px; /* 박스안에 가운데 오게하는 거 (높이와 동일한 값) */
+            color: black;
+           
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>EVENT</h1>
+
+        <div class="date">
+            <p>팔로우 이벤트</p>
+            <p>2026.01.26 ~ 2026.02.28</p>
+        </div><!-- date -->
+
+        <div class="step">
+            <div>
+                <p>step 1</p>
+                <p>본 계정을 팔로우하세요!</p>
+            </div>
+
+            <div>
+                <p>step 2</p>
+                <p>이 게시글을 "좋아요" 눌러주세요!</p>
+            </div>
+
+            <div>
+                <p>step 3</p>
+                <p>댓글로 '아이디' 남겨주세요!</p>
+            </div>
+
+            <div>
+                <p>step 4</p>
+                <p>참여자 모두에게 할인쿠폰 증정</p>
+            </div>
+
+        </div><!-- step -->
+
+        <a href="http://www.naver.com" , target="_blank">계정으로 이동하기</a>
+
+    </div><!-- box -->
+</body>
+
+</html>

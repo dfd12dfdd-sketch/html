@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 스타일</title>
+    <style>
+        /* 영문폰트는 복사하여 무조건 맨위 배치! */
+        @import url('https://fonts.googleapis.com/css2?family=Emblema+One&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Eater&family=Emblema+One&display=swap');
+
+        /* alt + shfit + F 코드자동정렬 */
+
+        @font-face {
+            font-family: 'GMarketSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: 300;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'GMarketSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        /* 2번째 폰트 아래부터 */
+        @font-face {
+            font-family: 'KerisKedyuche';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_R.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'KerisKedyuche';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_B.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .font {
+            font-size: 30px;
+            font-weight: 700;
+            /* lighter 얇게 / 지마켓산스폰트 크기입력 */
+            font-style: italic;
+            font-family: 'GMarketSans';
+        }
+
+        .font-02 {
+            font-weight: 400;
+            font-family: 'KerisKedyuche';
+            font-size: 50px;
+
+        }
+
+        /* 영문폰트 아래부터 */
+        .font-03 {/* 사이트 코드 2번째꺼 붙여넣기 구역 */
+            font-family: "Emblema One", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: #537406;
+            text-align: justify; /* left center right justify(양끝정렬) */
+
+        }
+
+        .font-04 {
+            font-family: "Eater", serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="font">
+        폰트스타일
+    </div>
+    <div class="font-02">
+        폰트스타일 2
+    </div>
+
+    <div class="font-03">
+        <!-- 아래 lo 만 타이핑 > 엔터 -->
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum voluptate perspiciatis inventore totam
+        consequuntur mollitia explicabo eveniet sequi esse blanditiis omnis aliquam sit architecto!
+    </div>
+
+    <div class="font-04">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    </div>
+
+</body>
+
+</html>

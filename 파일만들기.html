@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일만들기</title>
+    <style>
+        /* 누구에게 {어떤스타일: 어떤값;}
+        선택자 {속성: 속성값;} */
+        /* 주석내용 입력 단축키 alt + shfit + a */
+        h1 {color: #09bd81;background-color: rgb(250, 240, 226);}/* 이렇게 안씀 */
+
+        h2{
+            color: #288d6b;
+            background-color: beige;
+            font-size: 16px;
+            padding: 40px;
+            width: 100px;
+        }/* 이렇게 잘 씀 */
+
+        p {
+            background-color: #cebddd;
+        }/* class 적용안시켰을 때 */
+
+        .text {
+            color: rgb(226, 53, 10);
+            padding: 30px;
+            font-size: 30px;
+        }/* class 적용시킬 때 */
+        img {
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+   <h1>가장 큰 제목 => 로고 size</h1>
+   <h2>두번째 큰 제목</h2>
+   <h3>3번째</h3>
+   <h4>4번째</h4>
+   <h5>5번째-잘 안씀</h5>
+   <h6 class="text">6번째-잘 안씀</h6>
+
+   <p>텍스트 문장 작성할 때 사용되는 P 태그 / 기본 폰트크기 16Px</p>
+   <div>그룹할 때 사용되는 div 태그</div>
+   <p class="text">두번째 p 태그</p>
+   <img src="img/img1.jpg" alt="이미지 설명넣기 태그"/><!-- 단독태그 -->
+</body>
+</html>

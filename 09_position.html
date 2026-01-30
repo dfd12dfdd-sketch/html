@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <!-- 에뛰드 사이트 참고 -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box-01 {
+            height: 300px;
+            background-color: #f0f5ff;
+
+            /* 2. box-01 포지션 적용시킨 뒤 아래 작성 */
+            margin-top: 200px;
+            position: relative;
+            /* 4. 입력 후 확인하기 */
+        }
+
+        .box-01 p {
+            background-color: antiquewhite;
+            width: 200px;
+            height: 200px;
+
+            /* 1. 아래부터 포지션 적용시키는 태그들 */
+            position: absolute;
+            top: 0px;
+            /* 3. 200에서 0 수정 후 확인하기 */
+            left: 100px;
+        }
+
+        /* 필수 세트! absolute; relative; */
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: aquamarine;
+            margin: 150px auto;
+
+            position: relative;
+            /* 3 */
+
+        }
+
+        .box p {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* 1 */
+        }
+
+        .box p:nth-child(1) {
+            background-color: antiquewhite;
+            /* 2 */
+            top: 100px;
+            left: 100px;
+        }
+
+        .box p:nth-child(2) {
+            background-color: rgb(243, 190, 122);
+            left: 0;
+            top: -100px;
+        }
+
+        .box p:nth-child(3) {
+            background-color: rgb(133, 211, 123);
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .box p:nth-child(4) {
+            background-color: rgb(202, 212, 52);
+            left: 0px;
+            bottom: -100px;
+        }/* 1~4 앱솔루트 적용한 거 */
+
+        .box p:nth-child(5) {
+            /* 브라우저 스크롤 했을 때 고정 fixed */
+            background-color: rgb(194, 166, 74);
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+
+        }
+
+        .box p:nth-child(6) { /* 스크롤했을 때 영역(민트색)안에서만 있음 (에뛰드 사이트 좌측영역 참고) */
+            background-color: rgb(235, 113, 31);
+            position: sticky;
+            top: 30px;
+        }
+        body {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-01">
+        <p>absolute</p>
+    </div><!-- box-01 -->
+
+    <div class="box">
+        <p>1.absolute</p>
+        <p>2.absolute</p>
+        <p>3.absolute</p>
+        <p>4.absolute</p>
+        <p>5.fixed</p>
+        <p>6.sticky</p>
+    </div><!-- box -->
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그성격</title>
+    <style>
+      p {
+         background-color: #d8bdf1;
+         width: 250px;
+         height: 250px;
+         margin: 50px;
+         padding: 50px;
+      }
+      span {
+        background-color: #bbf5e1;
+        /* 아래 간격 크기 적용안됨 그냥 테스트용 
+        width: 250px;
+        height: 250px;
+        margin: 100px;
+        padding: 100px;
+        */
+      }
+    </style>
+</head>
+<body><!-- 본문안 들어가는 태그일 때 ex) span 입력시 태그자동완성됨 -->
+
+ <!-- block 요소 : 사이즈 등 간격여백조절O -->
+  <p>p 태그</p>
+  <div>div 태그</div>
+  <ul>
+    <li>li 태그</li>
+    <li>li 태그</li>
+  </ul>
+
+  <!-- inline 요소 : 사이즈 등 간격조절X -->
+   <span>span 태그</span> <!-- 스타일 추가 기능 -->
+   <a href="#">a 태그</a> <!-- # 링크주소 없을 때 -->
+   <a href="#">a 태그</a>
+
+
+</body>
+</html>        

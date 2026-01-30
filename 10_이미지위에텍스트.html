@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 위에 텍스트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            position: relative; /* 형제끼리 적용X (img=p 형제의미) 그래서 여기적용 */
+        }
+
+        .box img {
+            /* 100% => 부모 .box의 400px 적용하는 거 */
+            width: 100%;
+            height: 100%;
+        }
+
+        .box p {
+            color: rgb(253, 253, 253);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+
+        .list {
+            width: 1280px;
+            margin: 100px auto; /* 100px 그전 수업 이미지간 패딩수치임 신경X */
+            display: flex;
+            justify-content: space-between; /* display fiex 세트가 필수! 가로사이즈에 맞게 자동 맞춤기능 */     
+        }
+
+        .list .item {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            border-radius: 40px;
+            overflow: hidden; /* 벗어난 자식 숨김 (피그에서 내용숨김기능) */
+        }
+
+        .list .item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .list .item p {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            color: aliceblue;
+            background-color: rgba(255, 255, 255, 0.301); /* 색상코드 클릭하여 그라이데이션 수치 클릭 */
+            width: 100%;
+            padding: 16px; /* 16px 0px => 동일 (box sizing 무기재 가능) */
+            box-sizing: border-box;
+            backdrop-filter: blur(7px); /* 16px 만큼 영역 이미지 블러효과 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/img3.jpg" alt="" />
+        <p>이벤트</p>
+    </div><!-- box 앱솔루트 -->
+
+
+    <div class="list">
+        <div class="item">
+            <img src="img/img1.jpg" alt="" />
+            <p>item 1</p>
+        </div><!-- item 1 -->
+
+        <div class="item">
+            <img src="img/img2.jpg" alt="" />
+            <p>item 2</p>
+        </div><!-- item 2-->
+
+        <div class="item">
+            <img src="img/img3.jpg" alt="" />
+            <p>item 3</p>
+        </div><!-- item 3-->
+    </div><!-- list -->
+</body>
+
+</html>

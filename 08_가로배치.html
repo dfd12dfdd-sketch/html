@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>260126 가로배치</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            display: flex;
+            /* 자식요소 가로 배치되는 태그 (ex)li 자식, ul 부모 */
+            gap: 12px;
+            /* gap 간격태그이며 display: flex 필수로 있어야 적용됨! */
+        }
+
+        .menu li {
+            padding: 0 20px;
+            list-style: none;
+            height: 50px;
+            border: solid 1px black;
+            border-radius: 30px;
+            line-height: 50px;
+        }
+
+        .list {
+            display: flex;
+            gap: 32px;
+        }
+
+        .list .item {
+            /* 이 태그는 사진밑에 글자들이 무한정 가로로 적힘을 방지 (정렬배치를 위함) */
+            width: 432px;
+        }
+
+        .list .item img {
+            width: 432px;
+            height: 560px;
+            display: block;/* 사진과 텍스트 아이템1 사이 틈을 없애는 태그 */
+            margin-bottom: 24px; /* dispaly block 적용 후 마진값 입력하기 */
+        }
+        .list .item p {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="menu">
+        <li>meun 1</li>
+        <li>meun 2</li>
+        <li>meun 3</li>
+        <li>meun 4</li>
+        <li>meun 5</li>
+    </ul><!-- menu -->
+
+    <div class="list">
+        <div class="item">
+            <img src="img/img1.jpg" alt="" />
+            <p>아이템 1</p>
+        </div><!-- item -->
+
+        <div class="item">
+            <img src="img/img2.jpg" alt="" />
+            <p>아이템 2</p>
+        </div><!-- item -->
+
+        <div class="item">
+            <img src="img/img3.jpg" alt="" />
+            <p>아이템 3</p>
+        </div><!-- item -->
+    </div><!-- list -->
+</body>
+
+</html>
