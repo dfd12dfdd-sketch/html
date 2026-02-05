@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼 슬라이드</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" /><!-- 4. 사이트에서 복사 붙이기 --> <!-- 1번만 연결하면 됨 -->
+
+    <link rel="stylesheet" href="css/15.css"><!-- 직접 작성하기 -->
+</head>
+
+<body>
+    <!-- 스와이퍼데모 검색 > https://swiperjs.com/demos  -->
+
+    <section class="main_visual"><!-- 1. 이 클래스만 자체 만듦 -->
+
+        <div class="swiper mySwiper"> <!-- 2. 위 사이트에서 이 코드만 복사 붙여넣기 --><!-- swiper myswiper에서 myswiper는 아래 기재된 연결태그 / css작성 시 누락! -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/4.jpg" alt="" />
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/5.jpg" alt="" />
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/img3.jpg" alt="" />
+                </div><!-- swiper-slide -->
+
+            </div><!-- swiper-wrapper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </section><!-- .main_visual -->
+
+    <!-- 섹션부터 추가2 -->
+    <section class="section-01"><!-- 직접 작성 -->
+        <div class="swiper mySwiper-01"><!--2번째 사이트에서 복사 붙이기, myswiper-01 수정-->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- .section-01 -->
+
+    <!-- Swiper JS --> <!-- 3. 위 사이트에서 이 코드만 복사 붙여넣기 --> <!-- 1번만 연결하면 됨 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        var swiper = new Swiper(".mySwiper-01", {/* 2번째 사이트에서 복사 붙이기, myswiper-01 수정 */
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+
+</body>
+
+</html>

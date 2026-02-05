@@ -27,44 +27,90 @@ meta name="viewport" content="width=device-width, initial-scale=1.0" => 반응�
 
 ul li {
     list-style: none; /* li 블릿 (원형 기호) 없애는 태그
+    box-sizing: border-box; /* 테두리, 패딩 포함하여 사이즈 설정 (박스크기 변하지 X) */
 }
 
-- block 요소 가로여백 줄바꿈 등 O : h1~h6, p, div, ul li / header, section, main, aside, footer
-- inline 요소 가로여백 줄바꿈 등 X : span, a, input
+1. block 요소 가로여백 줄바꿈 등 O : h1~h6, p, div, ul li / header, section, main, aside, footer
+2. inline 요소 가로여백 줄바꿈 등 X : span, a, input / strong 글자볼드, em 글자기울기
+3. 시맨틱 태그 p.54 : header nav 로그인 로고 => 헤더 / main = section / aside ?/ footer => 주소 등 카피라이트 / h1~h6, img, a, div, span, p
+
 
 <img src="폴더 등 경로" alt="사진설명" /> => "/" 필수
+
 h1 => 로고 사이즈 필수! (가장 큼) 한문서당 1개만 씀/ h1~h4 잘 씀 / h5 h6 작아서 X
 a href="#" =>링크주소 없을 때
-.text => . class 적용 시킬 때
-ex) <p class="text">
 
 <마진 = 패딩 설정>
- .margin-1 { 테이블 밖 여백
-        margin: 30px; => 상하좌우
-    }
-    .margin-2 {
-        margin: 80px 100px; => 상하 80px 좌우 100px
-    }
-    .margin-3 {
-        margin: 10px 50px 80px; => 상 좌우 하
-    }
-    .margin-4 {
-        margin: 10px 20px 40px 80px; => 상 우 하 좌 시계방향 
-    }
-    .margin-5 {
-        margin-top: 10px;
-        margin-left: 50px;
-        margin-right: 100px;
-        margin-bottom: 30px;
-    }
+- margin: 30px; => 상하좌우
+- margin: 80px 100px; => 상하 80px 좌우 100px (상하 80px 좌우 0px)
+- margin: 10px 50px 80px; => 상 좌우 하
+- margin: 10px 20px 40px 80px; => 상 우 하 좌 시계방향 
+
 <!-- div.margin-1 입력 후 엔터 : 자동입력됨 -->
     <div class="margin-1">margin 1</div>  
- 
-<그외 태그>
+
+----------------
+ul .border-01 { 
+    border: solid 10px 색상코드;
+}
+(solid 선 / dotted 도트선 / dashed 점선) ex) border-right: dotted 15px 색상코드; => right top left bottom 적용가능
+
+ ul .radius-05 { 모서리 곡선태그 
+        border-radius: 50%; /* 정사각형만 원형됨 */
+}
+ul .radius-01 {
+        border-radius: 20px; = 마진 상하좌우 동일적용됨!
+}
+<ul><li class="radius-01">모서리곡선 1</li></ul>
+-----------------
+★★★
+ul li {
+   list-style: none; /* li 블릿 (원형 기호) 없애는 태그
+   box-sizing: border-box; /* 테두리, 패딩 적용없이 정사이즈 (박스크기 수치대로 반영) */
+}
+
+- border: solid 1px 색상코드; => 박스 선 넣기
+  (border-bottom: solid 1px black; 밑줄만 -> border-top & border-left & border-right 응용가능)
+
+- border-radius: 20px; / border-radius: 50%; 원형 / => 모서리 곡선
+- box-sizing: border-box; => 테두리, 패딩 적용없이 정사이즈 (박스크기 수치대로 반영)
+
+- margin: 0 auto; => 상하값 0, 좌우값 auto가 전체 가운데 배치하는 태그
+- p:nth-child(1) => 1줄만 적용
+- item > span => 선택자 > 는 자식선택자 선택, > 없으면 자식,자손 모두 선택(전부 선택됨) (ex) > 입력 시 span 1곳만 적용O
+- line-height: 1; => line height 숫자값은 font size의 배수 80*1=>80 (6일차예제 참고. 프로덕트 폰트들이 상단배치)
+
+# 라운딩 버튼 예제문 
+- text-decoration: none; => 텍스트 폰트 밑줄 등 없애기
+- display: block; => 가로세로 사이즈 입력가능케 함 (인라인 요소인 a 태그 사이즈 설정하기)
+- line-height: 35px; => 버튼 상하 가운데 배치
+  height: 35px; (한 세트 필수! 35px -> height 35와 동일해야 함)
+
+# 메뉴 등 가로로 배치
+<div li 일때..>
+display: flex; => 자식요소 가로 배치되는 태그 (ex)li 자식, ul 부모
+gap: 12px; =>  gap 가로간격태그! display: flex 필수로 있어야 적용됨
+
+<div img 일때..>
+display: flex;
+justify-content: space-between; => 자동 가로정렬
+
+★ position: relative : width px / height px 무조건 영역 잡기! (그 안에서 움직여야하니까. 11 5일차예제 참고 상황따라 다름)
+
+----------------------------
+[이미지 효과]
+- overflow: hidden; /* 이미지 모서리영역 벗어난 자식 숨김 (피그에서 내용숨김기능)
+- backdrop-filter: blur(7px); /* 16px 만큼 영역 이미지 블러효과
+- object-fit: cover; 이미지 사이즈에 맞게 배치. 단점은 이미지가 짤릴 수 있음 (width height 수치에 맞게 배치)
 
 <기타>
-1. 기본 폰트크기 16Px
+1. 기본 폰트크기 16Px => font size 16px 입력 X 적용됨
+
 <단축키>
+0. 색상입력 : ctrl + 스페이스바 > 맨아래 페이지다운&엔드 키 누름 색상선택 or red 타이핑 or #000000
 1. 이모지창 : win + . 
 2. 주석달기 : alt + shfit + a
+3. 코딩 코드 자동정렬 : alt + shfit + F 
+4. 코딩화면 줄바꿈 : alt + z
+5. 코딩 복사 자동생성 : 마우스 영역 블럭 후 alt + shfit 혹은 방향키
 

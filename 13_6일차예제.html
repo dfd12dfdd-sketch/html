@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수직정렬 프린트예제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-01 {
+            background-color: aliceblue;
+            padding: 120px 0;
+        }
+
+        .section-01 .inner {
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .section-01 .inner img {
+            width: 735px;
+            height: 550px;
+            object-fit: cover;
+            /* 이미지 사이즈에 맞게 배치됨. 단점은 이미지가 짤릴 수 있음 (width height 수치에 맞게 배치) */
+        }
+
+        .section-01 .inner .text_wrap h2 {
+            font-size: 80px;
+            margin-bottom: 60px;
+            line-height: 1;
+            /* line height 숫자값은 font size의 배수 80*1=>80 (프로덕트 폰트들이 상단에 배치됨) */
+        }
+
+        .section-01 .inner .text_wrap .text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+       .section-02 .inner {
+            width: 1280px;
+            margin: 120px auto;
+            background-color: rgb(188, 216, 240);
+        }
+        .section-02 .inner .title {
+            margin-bottom: 50px;
+        }
+        .section-02 .inner .title h2 {
+            font-size: 80px;
+            padding-bottom: 20px;
+            line-height: 1;
+        }
+        .section-02 .inner .list {
+           display: flex;
+           justify-content: space-between;         
+        }
+        .section-02 .inner .list .item {
+            width: 299px;
+            height: 360px;
+            background-color: aliceblue;
+            border-radius: 20px;
+            padding: 36px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .section-02 .inner .list .item .text span {
+            background-color: rgb(201, 230, 243);
+            width: 80px;
+            height: 30px;
+            border-radius: 15px;
+            display: block;
+            text-align: center;
+            line-height: 30px;
+            margin-bottom: 20px;          
+        }
+        .section-02 .inner .list .item .text h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+       .section-02 .inner .list .item > span { /* 선택자 > 는 자식선택자 선택, > 없으면 자식,자손 모두 선택(전부 선택됨) (ex) > 입력 시 span 1곳만 적용가능 */
+            color: #05668d;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="section-01">
+        <div class="inner">
+            <div class="text_wrap">
+                <h2>PRODUCT</h2>
+                <div class="text">
+                    <h3>WEB & APP SERVICE</h3>
+                    <p>웹과 앱을 아우르는 통합 디지털 플랫폼을 통해<br />
+                        사용자 중심의 경험과 안정적인 서비스를 제공합니다.<br />
+                        기획부터 디자인, 개발까지 <br />
+                        완성도 높은 웹º앱 솔루션을 소개합니다.</p>
+                </div><!-- text -->
+            </div><!-- text wrap -->
+            <img src="img/img1.jpg" alt="" />
+        </div><!-- inner -->
+    </div><!-- section-01 -->
+
+    <div class="section-02">
+        <div class="inner">
+            <div class="title">
+                <h2>NEWS</h2>
+                <p>웹/앱의 새로운 소식을 알려드립니다.</p>
+            </div><!-- title -->
+            <div class="list">
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>[UPDATE] 모바일 앱 v2.5 정식 출시</h3>
+                        <p>앱 성능과 사용성을 대폭 개선한 v2.5 업데이트가 배포되었습니다.</p>
+                    </div><!-- text -->
+                    <span>26.01.30.</span>
+                </div><!-- item -->
+
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>웹 서비스 리뉴얼 업데이트 안내</h3>
+                        <p>앱 성능과 사용성을 대폭 개선한 v2.5 업데이트가 배포되었습니다.</p>
+                    </div><!-- text -->
+                    <span>26.01.30.</span>
+
+                </div><!-- item -->
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>UX 리서치 결과 리포트 공개</h3>
+                        <p>앱 성능과 사용성을 대폭 개선한 v2.5 업데이트가 배포되었습니다.</p>
+                    </div><!-- text -->
+                    <span>26.01.30.</span>
+
+                </div><!-- item -->
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>신규기능 실시간 알림센터 추가</h3>
+                        <p>앱 성능과 사용성을 대폭 개선한 v2.5 업데이트가 배포되었습니다.</p>
+                    </div><!-- text -->
+                    <span>26.01.30.</span>
+                </div><!-- item -->
+
+            </div><!-- list -->
+        </div><!-- inner -->
+
+    </div><!-- section-02 -->
+</body>
+
+</html>
