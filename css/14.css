@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* => 여기에 작업하기! */
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* inherit : 상속받기 (초기값이 블랙(텍스트 전체 블랙으로 반영), 태그명령 했을 때 전체 변경가능됨) */
+}
+
+.header {
+    height: 100px;
+    background-color: #f7eee4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+.header .nav .gnb {
+    display: flex;
+    gap: 40px;
+
+}
+
+.header .util {
+    display: flex;
+    gap: 20px;
+}
+
+.main_visual {
+    background-color: aliceblue;
+    height: 100vh;
+    /* 100vh : 브라우저상 화면 높이값 만큼 자동 늘어남 */
+
+}
+
+.main_visual h2 {
+    font-size: 100px;
+    text-align: center;
+    line-height: 100vh;
+}
+
+.section-01 {
+    background-color: azure;
+    padding: 120px 0;
+}
+
+.section-01 .inner {
+    width: 1280px;
+    background-color: #d1f8f8;
+    margin: 0 auto;
+}
+
+.section-01 .inner h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-01 .inner .list .item {
+    width: 305px;
+    height: 305px;
+    background-color: #b8e9da;
+    border-radius: 20px;
+}
+
+/* 두번째 섹션 시작 */
+
+.section-02 {
+    background-color: rgb(213, 241, 241);
+    padding: 120px 0;
+}
+.section-02 .inner {
+    width: 1280px;
+    margin: 0 auto;
+    background-color: #b8e9da;
+}
+.section-02 .inner h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.section-02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.section-02 .inner .list .item {
+    width: 305px;
+}
+.section-02 .inner .list .item img {
+    width: 100%;/* % 이게 젤 좋음 */
+    height: 305px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* 세번째 섹션 시작 */
+.section-03 {
+    background-color: rgb(203, 236, 229);
+    padding: 120px 0;
+}
+.section-03 .inner {
+    width: 1280px;
+    margin: 0 auto; /* auto => width 있어야 적용 */
+    background-color: #b8e9da;
+}
+.section-03 .inner h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.section-03 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.section-03 .inner .list .item {
+    width: 305px;
+    height: 305px;
+    position: relative;
+}
+.section-03 .inner .list .item img {
+    width: 100%;
+    height: 305px;
+    object-fit: cover;
+}
+.section-03 .inner .list .item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0; 
+    color: rgb(243, 243, 243);
+    background-color: rgba(240, 255, 255, 0.527);
+}
+
+.footer {
+    background-color: #f7eee4;
+    padding: 100px;
+    text-align: center;
+    color: #3f4745;
+}
