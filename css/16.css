@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.video {
+    height: 80vh; /* height => % 안먹힘 */
+    position: relative;
+}
+.video video {
+    width: 100%;
+    height: 100%; /* 부모태그가 있어 100%가 적용됨 */
+    object-fit: cover; /* 영상도 풀로 채운다 */
+}
+
+.video .text {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 50%; /*가운데 배치 50% 값 */
+    left: 0;
+    transform: translateY(-50%);/* translate 이동태그 (가운데 배치 시 top 50% 세트로!)*/
+    width: 100%;
+    text-align: center;
+}
+.video .text h1 {}
+.video .text a {}
