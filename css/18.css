@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
 }
 
@@ -17,28 +18,78 @@ h1 {
     text-align: center;
     font-size: 80px;
 }
+
+/* section-01 */
+.section-01 {
+    background-color: beige;
+    padding: 100px 0;
+}
+
+.section-01 .inner {
+    max-width: 1280px;
+    /* max width = width 세트 브라우저에 맞게 자동크기 조절됨 (큰 영역인 컨테이너 묶어있는 부분 1구역에만 작성) */
+    width: 100%;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+.section-01 .inner h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-01 .inner .list .item {
+    /*   width: 299px; 백분에 1로 계산하여 아래 width 24% 적용*/
+    width: 24%;
+    background-color: #f5f7f6;
+    padding: 20px;
+}
+
+.section-01 .inner .list .item p {}
+
 /* 화면의 크기가 1024px 이하일 때 스타일 변화 // 1024는 테블릿 기준 // 브라우저상 F12 혹은 검사로 확인하기!*/
 @media screen and (max-width:1024px) {
     h1 {
         font-size: 40px;
         color: aquamarine;
     }
-} 
+}
 
 /* 화면의 크기가 768px 이하일 때 스타일 변화 */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 20px;
         color: blueviolet;
     }
-}/* max-width: 768px */
+}
+.section-01 .inner .list {
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.section-01 .inner .list .item {
+    width: 49%;
+}
+/* max-width: 768px */
 
 /* 화면의 크기가 480px 이하일 때 스타일 변화 => 모바일 기준 SIZE */
 @media screen and (max-width:480px) {
-    body {background-color: #cff7f3;}
+    body {
+        background-color: #cff7f3;
+    }
+
     h1 {
         font-size: 16px;
         color: #e7b016;
         text-align: left;
     }
+}
+
+.section-01 .inner .list .item {
+    width: 100%;
 }

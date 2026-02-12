@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bg-01 {
+    height: 420px;
+    background-color: aliceblue;
+    background-image: url('../img/4.jpg');/* 따옴표 없어도 무방 */
+    background-size: 100px; /* 1개 100px 입력 시 가로값만! 그외 자동수치 */
+    background-repeat: no-repeat;
+    /* repeat-x, repeat-y, no-repeat */
+    /* background-position: 20px 100px; /* 가로X 세로Y */
+    background-position: right bottom; /* left right top bottom center */
+}
+
+.bg-02 {
+    
+    margin: 100px 0;
+    height: 500px;
+    /* background 속기법 한줄 표기 */
+    /* background:이미지경로 위치 / 크기 반복 고정 */
+   /*  background: url('../img/5.jpg') center(이미지 보여지는 부분) / 200px no-repeat #ffff002c; */
+    background: url('../img/5.jpg') left top / cover no-repeat #ffff002c fixed;
+}/* fixed 고정, cover 영역채우기 no-repeat 이미지 하나만 적용 */
+
+.bg-03 {
+    height: 500px;
+    /* 그라디언트 io > https://cssgradient.io/ */
+    /* 위 사이트 코드 붙이기 */
+    background: #2A7B9B;
+    background: linear-gradient(99deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(180, 171, 214, 1) 80%, rgba(237, 221, 83, 1) 100%);
+}
