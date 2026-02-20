@@ -1,0 +1,303 @@
+/* 눈누 폰트 연결하기 */
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    /* body태그안에 이줄만 복사붙이기 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    /* 기본사이즈 > normal 또는 400 / bold 또는 600 or 700 기본 */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Paperozi';
+}
+
+/* 공통요소 */
+.inner {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+.header {
+    background-color: aliceblue;
+    margin: 20px auto;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 30px;
+}
+
+
+.main .main_visual {
+    position: relative;
+
+    /*   그라데션 등 이미지안할때  
+    height: 100vh;
+    display: flex;
+    align-items: center; */
+}
+
+.main .main_visual img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.main .main_visual .text {
+    max-width: 1280px;
+    width: calc(100% - 48%);
+
+    position: absolute;
+    left: 30px;
+    top: 65px;
+    color: rgb(255, 255, 255);
+    /*  left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%); */
+}
+
+
+.main .main_visual .text h2 {
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+.main .main_visual .text p {
+    padding-bottom: 60px;
+}
+
+.main .main_visual a {
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 140px;
+    height: 60px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: black;
+}
+
+.section01 .inner {
+    padding: 120px 0;
+}
+
+.section01 .inner .font {
+    text-align: center;
+}
+
+.section01 .inner .font h2 {
+    padding-bottom: 20px;
+    line-height: 1px;
+}
+
+.section01 .inner .font p {
+    padding-bottom: 60px;
+}
+
+.section01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section01 .inner .list .item {
+    width: 380px;
+    height: 315px;
+    border-radius: 10px;
+    border: solid 1px rgb(192, 192, 192);
+    overflow: hidden;
+}
+
+.section01 .inner .list .item img {
+    width: 100%;
+    height: 200px;
+}
+
+.section01 .inner .list .item .text {
+    padding: 20px;
+}
+
+.section01 .inner .list .item .text p {
+    padding-top: 12px;
+}
+
+/* 섹션2 */
+.section02 {
+    padding: 120px;
+    background-color: aliceblue;
+
+}
+
+.section02 .inner {
+    display: flex;
+    align-items: center;
+
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+
+}
+
+.section02 .inner img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.section02 .inner .text2 {
+    padding-right: 30px;
+}
+
+.section02 .inner .text2 h2 {
+    padding-bottom: 20px;
+    line-height: 1px;
+}
+
+.section02 .inner .text2 p {
+    padding-bottom: 40px;
+}
+
+.section02 .inner .text2 li {
+    padding-bottom: 15px;
+}
+
+.section03 {
+    margin: 100 auto;
+}
+
+.section03 .inner .text {
+    text-align: center;
+}
+
+.section03 .inner .text strong {
+    padding-bottom: 20px;
+}
+
+.section03 .inner .text p {
+    padding-bottom: 60px;
+}
+
+.section03 .inner .list {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.section03 .inner .list .item {
+    width: 290px;
+    height: 350px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.section03 .inner .list .item:hover .font {
+    transform: translateY(100%);
+}
+
+.section03 .inner .list .item .font {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(240, 248, 255, 0.438);
+    padding: 15px;
+
+    transform: translateY(0);
+    transform: 0.5s;
+}
+
+.section03 .inner .list .item img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .section01 {
+        margin: 20px;
+    }
+
+    .section01 .inner .list {
+        gap: 20px;
+    }
+
+    .section01 .inner .list .text {
+        padding: 20px;
+    }
+
+    .section02 .inner {
+        display: contents;
+        width: 100%;
+    }
+
+    .section03 .inner .list {
+       flex-wrap:wrap-reverse;
+       row-gap: 20px;
+    }
+
+
+    @media screen and (max-width: 500px) {
+        .main .main_visual .text {
+            text-align: center;
+        }
+
+        .section01 .inner {
+            width: 100%;
+        }
+
+        .section01 .inner .list {
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+
+
+        .section03 .inner {
+            width: 100%;
+        }
+
+        .section03 .inner .list {
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+
+        .section03 .inner .list .item {
+            margin: 0 auto;
+        }
+    }
