@@ -263,9 +263,12 @@ a {
         height: 100vh;
         background-color: #f3eee8;
         position: fixed;
-        top: 0;
+        top: 100px;
         right: 0;
         display: none;/* 숨김처리 */
+    }
+    .mobile_nav.active {/* 제이쿼리 삽입 후 작업한 태그 */
+        display: block;
     }
 
     .section-01 .inner .list .item a .text {
