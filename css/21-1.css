@@ -39,6 +39,10 @@ a {
 }
 
 /* 공통된 스타일 */
+.mobile {
+    display: none; /* 사이즈 줄였을 때 보여야 되는 메뉴를 숨김 */
+}
+
 .inner {
     max-width: 1280px;
     width: calc(100% - 48px);
@@ -57,7 +61,13 @@ a {
 
 .header {
     height: 100px;
-    background-color: aliceblue;
+    /* 아래부터 상단고정을 위해 적용 */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff59;
+    backdrop-filter: blur(7px);
 }
 
 .header .inner {
@@ -163,7 +173,7 @@ a {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    /* 기존태그 작성 시 마진값 120이 잡혀있어 추가 */
+    /* 기존태그 작성 시 마진값 120 잡혀있어 추가 */
 }
 
 .section-02 .inner .text_box {
@@ -241,6 +251,27 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
+    .inner {margin: 100px auto;}
+
+    /* 아래부터 사이즈 줄였을 때 상단메뉴적용 */
+    .nav {display: none;}
+    .mobile {display: block;}
+
+    /* 모바일 내비게이션 */
+    .mobile_nav {
+        width: 80%;
+        height: 100vh;
+        background-color: #f3eee8;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: none;/* 숨김처리 */
+    }
+
+    .section-01 .inner .list .item a .text {
+        padding: 20px;
+    }
+
     .section-02 .inner {
         flex-direction: column;
     }
@@ -251,9 +282,79 @@ a {
 
     .section-02 .inner img {
         width: 100%;
-        order: -1;/* 공통태그에 디스플레이 플렉스 있어야 사용됨. 디스플레이 플렉스 태그 무조건 있어야 가능! 순서바꾸기 (양수 뒤로 음수 앞으로) */
+        order: -1;
+        /* 공통태그에 디스플레이 플렉스 있어야 사용됨. 디스플레이 플렉스 무조건 있어야 가능! 순서바꾸기 (양수 뒤로 음수 앞으로) */
     }
 
-}
+    .section-03 .inner .list {
+        flex-wrap: wrap;
+        row-gap: 24px;
+    }
 
-/* 1024px */
+    .section-03 .inner .list .item {
+        width: 49%;
+        /* % 두줄됨 */
+    }
+
+    .section-03 .inner .list .item a .text {
+        width: 100%;
+        display: block;
+        /* display none 숨김을 보이게 함, 숨김을 보이게 한다 의미 => 현재는 호버 */
+        /* 본인에게 바로 적용 => display:block; display: none;없애기 display: inline-block; 잘 안씀, display flex 부모에게 적용 */
+    }
+} /* 1024px */
+
+/* 화면 줄여보고 @media screen 사이즈는 추가로 적용가능! */
+
+@media screen and (max-width: 480px) {
+    .inner {
+        width: calc(100% - 36px); /* 36=> 마진16 + 16하면 나옴 */
+        margin: 60px auto;
+    } /* 공통요소 */
+
+    .main_visual .text {
+        text-align: center;
+    }
+    .main_visual .text p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .main_visual .text a {
+        margin: 0 auto;
+    }
+    .main_visual .text h2 {
+        font-size: 40px;
+    }
+
+    .title h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    .section-01 .inner .title {
+        margin-bottom: 20px;
+    }
+    .title p {
+        font-size: 16px;
+    }
+
+    .section-01 .inner .list {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .section-01 .inner .list .item {
+        width: 100%;
+    }
+
+    .section-02 .inner img {
+        margin-bottom: 40px;
+    }
+
+    .section-03 .inner .title {
+        margin-bottom: 20px;
+    }
+    .section-03 .inner .list .item {
+        width: 100%;
+    }
+}/* 480 */
+
+/* ctrl+G 우측 번호 검색기능 */
